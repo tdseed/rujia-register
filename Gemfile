@@ -29,10 +29,11 @@ gem 'spring',        group: :development
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.1.0'
 
-# flat-ui
-# gem 'flatui-rails'
-
+#font
 gem "font-awesome-rails"
+
+#dashboard
+gem "rails_admin"
 
 group :development, :test do
 	# Use Capistrano for deployment
