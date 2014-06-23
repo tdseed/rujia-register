@@ -1,0 +1,54 @@
+      <div class="login">
+        <div class="login-screen">
+<!--           <div class="login-icon">
+            <img src="http://qr.liantu.com/api.php?text=http://www.homeinns.com/" alt="如家酒店" />
+            <h4>如家App <small>扫一扫</small></h4>
+          </div> -->
+        <%= form_for @user, html: { id: 'new-user-form' } do |f|%>
+          <div class="login-form">
+            <div class="form-group">
+              <%= f.text_field :name, class: 'form-control login-field', placeholder: '姓名' %>
+              <!-- <input type="text" class="form-control login-field" value="" placeholder="姓名" id="login-name" /> -->
+              <label class="login-field-icon fui-user" for="login-name"></label>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :phone, class: 'form-control login-field', placeholder:'电话' %>
+              <!-- <input type="text" class="form-control login-field" value="" placeholder="电话" id="login-pass" /> -->
+
+              <label class="login-field-icon" for="login-pass"><i class="fa fa-phone"></i></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">报  名</button>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+
+    <script type="text/javascript">
+      $('#new-user-form').validate({
+        rules: {
+          'user[name]': {
+            required: true
+          },
+          'user[phone]': {
+            // required: true,
+            // format: /^([^@\s]+)@((?:[a-z0-9-]+\.)+[a-z]{2,})$/i,
+            // remote: '/users/check_phone'
+            required: true
+          }
+        },
+        messages: {
+          'user[name]': {
+            required: '姓名不能为空'
+          },
+          'user[phone]': {
+            // required: '电话不能为空',
+            // format: '无效的手机号格式',
+            // remote: '此号码已经被使用'
+            required: '电话不能为空'
+          }
+        }
+      });
+    </script>
