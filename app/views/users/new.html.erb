@@ -33,10 +33,11 @@
             required: true
           },
           'user[phone]': {
-            // required: true,
-            // format: /^([^@\s]+)@((?:[a-z0-9-]+\.)+[a-z]{2,})$/i,
-            // remote: '/users/check_phone'
-            required: true
+            required: true,
+            number: true,
+            minlength: 11,
+            maxlength: 11,
+            remote: '/users/check_phone'
           }
         },
         messages: {
@@ -44,10 +45,11 @@
             required: '姓名不能为空'
           },
           'user[phone]': {
-            // required: '电话不能为空',
-            // format: '无效的手机号格式',
-            // remote: '此号码已经被使用'
-            required: '电话不能为空'
+            required: '手机号不能为空',
+            number: '无效的手机号格式',
+            minlength: '无效的手机号格式',
+            maxlength: '无效的手机号格式',
+            remote: '此号码已经被使用'
           }
         }
       });
