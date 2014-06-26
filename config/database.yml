@@ -23,9 +23,5 @@ test:
 
 production:
   <<: *default
-  adapter: mysql2
-  database: rujia_register
-  encoding: utf8
-  reconect: true
-  host: 192.168.210.206
-  port: 3306
+  adapter: sqlite3
+  database: db/production.sqlite3

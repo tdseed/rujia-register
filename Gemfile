@@ -16,12 +16,12 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+# # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# gem 'turbolinks'
+# # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# gem 'jbuilder', '~> 2.0'
+# # bundle exec rake doc:rails generates the API under doc/api.
+# gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -42,20 +42,19 @@ group :development, :test do
 	gem 'capistrano-rvm'
 	gem 'capistrano-bundler', '>= 1.1.2'
 	gem 'capistrano-ext'
-	gem 'capistrano-sidekiq'
 	
 	gem 'pry'
 	gem 'pry-nav'
 	gem 'factory_girl_rails'
 
-	# 开发模式下浏览器实时更新
-	gem 'rb-fsevent'
-	gem 'guard-livereload'
+	# # 开发模式下浏览器实时更新
+	# gem 'rb-fsevent'
+	# gem 'guard-livereload'
 
-	gem "better_errors"
-	gem "binding_of_caller"
+	# gem "better_errors"
+	# gem "binding_of_caller"
 end
 
-group :production do
-  gem 'mysql2'
-end
+# group :production do
+#   gem 'mysql2'
+# end
