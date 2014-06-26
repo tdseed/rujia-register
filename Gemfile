@@ -56,6 +56,6 @@ group :development, :test do
 	# gem "binding_of_caller"
 end
 
-# group :production do
-#   gem 'mysql2'
-# end
+group :production do
+  gem 'mysql2'
+end
