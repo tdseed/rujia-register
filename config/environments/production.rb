@@ -55,7 +55,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = "http://assets.example.com"
+  config.action_controller.asset_host = "http://idea.homeinns.com/qrcode"
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -81,6 +81,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # 部署到二级目录
-  config.relative_url_root = "/qrcode"
+  # # 部署到二级目录
+  # config.relative_url_root = "/qrcode"
 end
