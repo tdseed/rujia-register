@@ -22,9 +22,16 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql2
+  database: rujia_register_production
+  encoding: utf8
+  reconect: true
+  host: 192.168.210.206
+  pool: 5
+  port: 3306
+  username: rujia_register
+  password: rujia_register2014
+  timeout: 5000
 
 staging:
   <<: *default
