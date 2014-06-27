@@ -1,14 +1,31 @@
 class UsersController < ApplicationController
+
+  # skip_before_filter :verify_authenticity_token, :only => :create]
+  protect_from_forgery with: :null_session
+  before_action :js_params
+
   def new
     @user = User.new
+    respond_to do |format|
+      format.html
+      format.json { render json: @user}
+    end
+  end
+
+  def new2
+
   end
 
   def create
     @user = User.new params.require(:user).permit(:name, :phone)
-    if @user.save
-      redirect_to "http://www.baidu.com"
-    else
-      render :new
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to '/over' }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors }
+      end
     end
   end
 
@@ -20,4 +37,9 @@ class UsersController < ApplicationController
     end
   end
 
+  private
+  def js_params
+    gon.userPostPath = users_path
+    gon.userOverPath = over_path
+  end
 end

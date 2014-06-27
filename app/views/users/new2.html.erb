@@ -4,42 +4,21 @@
             <img src="http://qr.liantu.com/api.php?text=http://www.homeinns.com/" alt="如家酒店" />
             <h4>如家App <small>扫一扫</small></h4>
           </div> -->
-        <%= form_for @user, html: { id: 'new-user-form' } do |f|%>
           <div class="login-form">
             <div class="form-group">
-              <%= f.text_field :name, class: 'form-control login-field', placeholder: '姓名' %>
+              <input class="form-control login-field" id="user_name" name="user[name]" placeholder="姓名" type="text" />
               <!-- <input type="text" class="form-control login-field" value="" placeholder="姓名" id="login-name" /> -->
               <label class="login-field-icon" for="login-name"><i class="fa fa-user"></i></label>
             </div>
 
             <div class="form-group">
-              <%= f.text_field :phone, class: 'form-control login-field', placeholder:'手机' %>
+              <input class="form-control login-field" id="user_phone" name="user[phone]" placeholder="手机" type="text" />
               <!-- <input type="text" class="form-control login-field" value="" placeholder="电话" id="login-pass" /> -->
 
               <label class="login-field-icon" for="login-pass"><i class="fa fa-phone"></i></label>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">报  名</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" value="disable" disabled>已 报 名</button>
           </div>
-          <% end %>
         </div>
       </div>
-
-
-  <section class="cover" style="display:none">
-    <figure>
-      <figcaption>
-        <h2>报名成功<%= image_tag "clear.png" %></h2>
-      </figcaption>
-    </figure>
-  </section>
-
-
-    <script type="text/javascript">
-
-
-     (function(){
-        window.UserUI();
-      })();
-
-    </script>

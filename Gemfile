@@ -27,6 +27,9 @@ gem 'turbolinks'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Gon - 在向浏览器JS runtime传递Rails variables
+gem 'gon'
+
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.1.0'
 

@@ -2,6 +2,21 @@
   color: rgb(250, 255, 189);
 }
 
+.login-screen {
+  /*position: absolute;*/
+  z-index: 0;
+}
+
+.cover {
+  position: absolute;
+  z-index: 1;
+  margin: 0 80px;
+  height: 80px;
+  width: 180px;
+  background-color: yellow; 
+  margin-top: -460px;
+}
+
 .dropdown-arrow-inverse {
   border-bottom-color: #34495e !important;
   border-top-color: #34495e !important;
