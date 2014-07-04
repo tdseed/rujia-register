@@ -7,6 +7,7 @@
 
         <%= form_for @user, html: { id: 'new-user-form' } do |f|%>
           <div class="login-form">
+            <div class="title center">扫码开门 免费体验</div>
             <div class="form-group">
               <%= f.text_field :name, class: 'form-control login-field', placeholder: '姓名' %>
               <!-- <input type="text" class="form-control login-field" value="" placeholder="姓名" id="login-name" /> -->
@@ -36,7 +37,7 @@
   <section class="cover" style="display:none">
     <figure>
       <figcaption>
-        <h2>报名成功<%= image_tag "clear.png" %></h2>
+        <h3>报名成功</h3>
       </figcaption>
     </figure>
   </section>
