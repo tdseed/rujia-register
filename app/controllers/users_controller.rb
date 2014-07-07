@@ -17,16 +17,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    # @user = User.new params.require(:user).permit(:name, :phone)
-    # respond_to do |format|
-    #   if @user.save
-    #     format.html { redirect_to :action => "success" }
-    #     format.json { render json: @user, status: :created, location: @user }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @user.errors }
-    #   end
-    # end
+    @user = User.new params.require(:user).permit(:name, :phone)
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to :action => "success" }
+        format.json { render json: @user, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors }
+      end
+    end
 
     # @user = User.new
     # @user.name = params[:name]
@@ -37,12 +37,12 @@ class UsersController < ApplicationController
     #   render :new
     # end
 
-    @user = User.new params.require(:user).permit(:name, :phone)
-      if @user.save
-        redirect_to :action => "success"
-      else
-        render :new
-      end
+    # @user = User.new params.require(:user).permit(:name, :phone)
+    #   if @user.save
+    #     redirect_to :action => "success"
+    #   else
+    #     render :new
+    #   end
   end
 
   def check_phone
