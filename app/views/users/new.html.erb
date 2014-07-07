@@ -5,7 +5,7 @@
             <h4>如家App <small>扫一扫</small></h4>
           </div> -->
 
-        <%= form_for @user, html: { id: 'new-user-form' } do |f|%>
+        <%= form_for @user, url: {action: "create"}, html: { id: 'new-user-form' } do |f|%>
         <!-- <form id="new-user-form" method="get" action=""> -->
           <div class="login-form">
             <div class="title center">扫码开门 免费体验</div>
@@ -22,7 +22,8 @@
               <label class="login-field-icon" for="login-pass"><i class="fa fa-phone"></i></label>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">报  名</button>
+            <!-- <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">报  名</button> -->
+            <%= f.submit "报  名", :class => "btn btn-primary btn-lg btn-block"  %>
         <div class="text_wapper">
 一、此活动主要是为提供免费体验如家酒店集团全新二维扫码开门功能报名资格。</br>
 二、请您填写真实姓名及联系方式，以便我们与您取得联系确认详细信息。</br>
