@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   get 'signup', to: 'users#new', as: 'signup'
-  get 'over', to: 'users#new2'
+  get 'success', to: 'users#success'
 
   resources :users, only: [:create] do
     collection do

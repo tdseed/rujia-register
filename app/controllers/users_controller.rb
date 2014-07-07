@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def new2
+  def success
 
   end
 
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
     @user = User.new params.require(:user).permit(:name, :phone)
       if @user.save
-        redirect_to '/over'
+        redirect_to :action => "success"
       else
         render :new
       end
@@ -56,6 +56,6 @@ class UsersController < ApplicationController
   private
   def js_params
     gon.userPostPath = users_path
-    gon.userOverPath = over_path
+    gon.userOverPath = success_path
   end
 end
