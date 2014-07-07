@@ -1,29 +1,17 @@
       <div class="login">
         <div class="login-screen">
-<!--           <div class="login-icon">
-            <img src="http://qr.liantu.com/api.php?text=http://www.homeinns.com/" alt="如家酒店" />
-            <h4>如家App <small>扫一扫</small></h4>
-          </div> -->
-
         <%= form_for @user, url: {action: "create"}, html: { id: 'new-user-form' } do |f|%>
-        <!-- <form id="new-user-form" method="get" action=""> -->
           <div class="login-form">
-            <!-- <div class="title center">扫码开门 免费体验</div> -->
-            <img src="/assets/banner.jpg" class="banner">
+            <%= image_tag 'banner.jpg', :class=>"banner"%>
             <div class="form-group">
               <%= f.text_field :name, class: 'form-control login-field', placeholder: '姓名' %>
-              <!-- <input type="text" class="form-control login-field" value="" placeholder="姓名" id="login-name" /> -->
               <label class="login-field-icon" for="login-name"><i class="fa fa-user"></i></label>
             </div>
 
             <div class="form-group">
               <%= f.text_field :phone, class: 'form-control login-field', placeholder:'手机' %>
-              <!-- <input type="text" class="form-control login-field" value="" placeholder="电话" id="login-pass" /> -->
-
               <label class="login-field-icon" for="login-pass"><i class="fa fa-phone"></i></label>
             </div>
-
-            <!-- <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">报  名</button> -->
             <%= f.submit "报  名", :class => "btn btn-primary btn-lg btn-block"  %>
         <div class="text_wapper">
 一、此活动主要是为提供免费体验如家酒店集团全新二维扫码开门功能报名资格。</br>
@@ -33,7 +21,6 @@
         </div>
           </div>
           <% end %>
-          <!-- </form> -->
         </div>
       </div>
 
