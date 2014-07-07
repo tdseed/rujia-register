@@ -125,38 +125,38 @@
 
 
 
-// (function() {
-//   window.UserUI = function() {
-//     var coverSection;
-//       $('#new-user-form').validate({
-//         rules: {
-//           'user[name]': {
-//             required: true
-//           },
-//           'user[phone]': {
-//             required: true,
-//             number: true,
-//             minlength: 11,
-//             maxlength: 11,
-//             remote: '/users/check_phone'
-//           }
-//         },
-//         messages: {
-//           'user[name]': {
-//             required: '姓名不能为空'
-//           },
-//           'user[phone]': {
-//             required: '手机号不能为空',
-//             number: '无效的手机号格式',
-//             minlength: '无效的手机号格式',
-//             maxlength: '无效的手机号格式',
-//             remote: '此号码已经被使用'
-//           }
-//         }
-//       })
-//   }
+(function() {
+  window.UserUI = function() {
+    var coverSection;
+      $('#new-user-form').validate({
+        rules: {
+          'user[name]': {
+            required: true
+          },
+          'user[phone]': {
+            required: true,
+            number: true,
+            minlength: 11,
+            maxlength: 11,
+            remote: window.RailsParams.userCheckPhonePath
+          }
+        },
+        messages: {
+          'user[name]': {
+            required: '姓名不能为空'
+          },
+          'user[phone]': {
+            required: '手机号不能为空',
+            number: '无效的手机号格式',
+            minlength: '无效的手机号格式',
+            maxlength: '无效的手机号格式',
+            remote: '此号码已经被使用'
+          }
+        }
+      })
+  }
 
-// }).call(this);
+}).call(this);
 
 
 

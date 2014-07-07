@@ -57,5 +57,6 @@ class UsersController < ApplicationController
   def js_params
     gon.userPostPath = users_path
     gon.userOverPath = success_path
+    gon.userCheckPhonePath = check_phone_users_path
   end
 end
