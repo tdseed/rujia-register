@@ -5,17 +5,18 @@
             <h4>如家App <small>扫一扫</small></h4>
           </div> -->
 
-        <%= form_for @user, html: { id: 'new-user-form' } do |f|%>
+        <%#= form_for @user, html: { id: 'new-user-form' } do |f|%>
+        <form id="new-user-form" method="get" action="">
           <div class="login-form">
             <div class="title center">扫码开门 免费体验</div>
             <div class="form-group">
-              <%= f.text_field :name, class: 'form-control login-field', placeholder: '姓名' %>
+              <%= text_field_tag :name,nil, class: 'form-control login-field', placeholder: '姓名' %>
               <!-- <input type="text" class="form-control login-field" value="" placeholder="姓名" id="login-name" /> -->
               <label class="login-field-icon" for="login-name"><i class="fa fa-user"></i></label>
             </div>
 
             <div class="form-group">
-              <%= f.text_field :phone, class: 'form-control login-field', placeholder:'手机' %>
+              <%= text_field_tag :phone,nil, class: 'form-control login-field', placeholder:'手机' %>
               <!-- <input type="text" class="form-control login-field" value="" placeholder="电话" id="login-pass" /> -->
 
               <label class="login-field-icon" for="login-pass"><i class="fa fa-phone"></i></label>
@@ -29,7 +30,8 @@
 四、目前首家体验门店为如家快捷-上海柳州路光大会展中心店。</br>
         </div>
           </div>
-          <% end %>
+          <%# end %>
+          </form>
         </div>
       </div>
 

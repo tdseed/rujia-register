@@ -16,23 +16,31 @@ class UsersController < ApplicationController
 
   end
 
-  def create
-    @user = User.new params.require(:user).permit(:name, :phone)
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to '/over' }
-        format.json { render json: @user, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors }
-      end
+  def ajax_get
+    # @user = User.new params.require(:user).permit(:name, :phone)
+    # respond_to do |format|
+    #   if @user.save
+    #     format.html { redirect_to '/over' }
+    #     format.json { render json: @user, status: :created, location: @user }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @user.errors }
+    #   end
+    # end
+    @user = User.new
+    @user.name = params[:name]
+    @user.phone = params[:phone]
+    if @user.save
+      redirect_to '/over'
+    else
+      render :new
     end
   end
 
   def check_phone
     respond_to do |format|
       format.json do
-        render json: User.where('phone = ?', params[:user][:phone]).first.nil?
+        render json: User.where('phone = ?', params[:phone]).first.nil?
       end
     end
   end
