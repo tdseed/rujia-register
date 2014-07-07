@@ -6,18 +6,18 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'over', to: 'users#new2'
 
-  # resources :users, only: [:create] do
+  resources :users, only: [:create] do
+    collection do
+      get :check_phone
+      # get :ajax_get
+    end
+  end
+
+  # resources :users do
   #   collection do
   #     get :check_phone
   #     get :ajax_get
   #   end
   # end
-
-  resources :users do
-    collection do
-      get :check_phone
-      get :ajax_get
-    end
-  end
   
 end
