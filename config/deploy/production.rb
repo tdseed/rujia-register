@@ -14,12 +14,11 @@
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server '172.23.100.198', user: 'deploy', roles: %w{web db app}, my_property: :my_value
-server '172.23.100.199', user: 'deploy', roles: %w{web db app}, my_property: :my_value
+server '121.40.173.67', user: 'deploy', roles: %w{web db app}, my_property: :my_value
 
 
 set :rails_env, "production"
-set :rvm_ruby_version, '2.1'
+set :rvm_ruby_version, '2.1.4'
 set :deploy_to, "/data0/www/rujia-register/production"
 
 # you can set custom ssh options

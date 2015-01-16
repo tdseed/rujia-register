@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 set :application, 'rujia-register'
-set :repo_url, 'git@git.bestapp.us:root/rujia-register.git'
+set :repo_url, 'git@github.com:tdseed/rujia-register.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
