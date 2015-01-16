@@ -19,17 +19,16 @@ server '121.40.173.67', user: 'deploy', roles: %w{web db app}, my_property: :my_
 
 set :rails_env, "production"
 set :rvm_ruby_version, '2.1.4'
-set :deploy_to, "/data0/www/rujia-register/production"
+set :deploy_to, "/var/www/rujia-register/production"
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
 # you can see them in [net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start)
 # set it globally
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+set :ssh_options, {
+ keys: %w(~/.ssh/id_rsa),
+ forward_agent: true,
+}
 # and/or per server
 # server 'example.com',
 #   user: 'user_name',
