@@ -26,7 +26,6 @@ production:
   database: rujia_register_production
   encoding: utf8
   reconect: true
-  host: 121.40.173.67
   pool: 5
   port: 3306
   username: root
