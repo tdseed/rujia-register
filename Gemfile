@@ -46,6 +46,7 @@ group :development, :test do
 	gem 'capistrano-rvm'
 	gem 'capistrano-bundler', '>= 1.1.2'
 	gem 'capistrano-ext'
+	gem 'capistrano3-puma'
 
 	gem 'pry'
 	gem 'pry-nav'
@@ -62,5 +63,4 @@ end
 group :production do
   gem 'mysql2'
   gem 'puma'
-  gem 'capistrano3-puma'
 end
