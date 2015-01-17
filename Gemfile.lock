@@ -102,6 +102,8 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.3)
       pry (~> 0.9.10)
+    puma (2.9.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-pjax (0.7.0)
       nokogiri (~> 1.5)
@@ -194,6 +196,7 @@ DEPENDENCIES
   mysql2
   pry
   pry-nav
+  puma
   rails (= 4.1.1)
   rails_admin
   sass-rails (~> 4.0.3)
