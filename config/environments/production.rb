@@ -82,5 +82,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # 部署到二级目录
-  config.relative_url_root = "/qrcode"
+  # config.relative_url_root = "/qrcode"
 end
